@@ -1,0 +1,28 @@
+.PlantCard{
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px 100px;
+    border-radius: 10px;
+    position: relative;
+  
+}
+
+.category,
+.plant-image,
+.price,
+.description{
+
+    font-size: 20px;
+    font-weight: 400;
+margin: 20px;
+
+}
+
+.upper-line{
+    display: flex;
+    position: relative;
+}
+.plant-image{
+    position: absolute;
+    right: 50px;
+}
