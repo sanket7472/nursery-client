@@ -9,30 +9,22 @@ function Home() {
   const [error, setError] = useState(null);
 
   const loadPlants = async () => {
+    toast.loading("Loading Plants...");
     try {
-      toast.loading("Loading Plants...");
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/plant`);
       toast.dismiss();
-      console.log(response.data);
       setPlants(response.data.data);
       toast.success("Plants Loaded Successfully");
-    } catch (error) {
-      console.error(error);
-      setError(error.message);
-      toast.error("Error loading plants");
+    } catch (err) {
+      toast.dismiss();
+      setError(err.message);
+      toast.error("Failed to load plants");
     }
   };
 
   useEffect(() => {
     loadPlants();
-    return () => {
-      toast.dismiss(); 
-    };
   }, []);
-
-  if (error) {
-    return <div>Error loading plants: {error}</div>;
-  }
 
   return (
     <div>
