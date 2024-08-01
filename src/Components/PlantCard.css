@@ -10,6 +10,7 @@
     position: relative;
     background-color: aquamarine;
     width: 600px;
+    height: 250px;
   
 }
 
@@ -23,7 +24,9 @@
 
 
 }
-
+.btn-div{
+    display: flex;
+}
 .upper-line{
     display: flex;
     position: relative;

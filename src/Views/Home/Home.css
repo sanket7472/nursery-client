@@ -1,25 +1,25 @@
-.PlantCard-div{
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   margin: auto ;
-   justify-content: space-evenly;
-   position: absolute;
+.PlantCard-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 
 }
-.brand-name{
+
+.brand-name {
   align-items: center;
   text-align: center;
-border-radius: 10px;
+  border-radius: 10px;
   background-color: aquamarine;
   width: 350px;
-  margin:10px auto;
-   
+  margin: 10px auto;
+
 }
-.add-btn{
-  width: 70px;
+
+.add-btn {
+  height: 40px;
+  width: 40px;
   position: fixed;
   right: 15px;
   bottom: 15px;
-  z-index: 10;
 }
