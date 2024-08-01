@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import PlantCard from '../../Components/PlantCard';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import toast, { Toaster } from 'react-hot-toast';
+import AddICON from "./add-button.png"
 
 function Home() {
   const [plants, setPlants] = useState([]);
@@ -49,10 +51,17 @@ function Home() {
               image={image}
               price={price}
               description={description}
+              loadPlants={loadPlants}
             />
           );
         })}
+        <div>
+        <Link to="/add">
+        <img src={AddICON} className='add-btn' />
+        </Link>
+        </div>
         <Toaster />
+
       </div>
     </div>
   );
