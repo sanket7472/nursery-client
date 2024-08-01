@@ -3,8 +3,7 @@ import './PlantCard.css'
 import toast ,{ Toaster}  from 'react-hot-toast';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Delete from "./bin.png"
-import Edit from "./editing.png"
+
 
 
 function PlantCard({_id, plantname, category, image, price, description, loadPlants}) {

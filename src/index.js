@@ -6,6 +6,7 @@ import AddPlant from './Views/AddPlant/AddPlant';
 import PlantView from './Views/PlantView/PlantView';
 import './index.css';
 import toast ,{ Toaster}  from 'react-hot-toast';
+import UpdatePlant from './Views/UpdatePlant/UpdatePlant';
 
 
 
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   path: '/add',
   element: <AddPlant/>,
  },
+  {
+    path: '/update/:id',
+    element: <UpdatePlant/>,
+  },
 
  {
   path: '*',
